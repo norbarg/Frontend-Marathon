@@ -1,0 +1,31 @@
+.weather {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+}
+.day {
+    text-align: center;
+    transition: 0.3s;
+    margin: 2px;
+}
+.day img {
+    width: auto;
+    height: auto;
+}
+.day:hover {
+    box-shadow: -2px 2px 10px 5px rgb(15, 15, 15);
+}
+.date {
+    background-color: #0297b9;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+
+    width: 100%;
+}
+.temperature {
+    font-size: 2em;
+    font-weight: 400;
+}

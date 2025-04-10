@@ -1,0 +1,45 @@
+h1 {
+    font-size: 36px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    flex-grow: 1;
+    padding: 0px 10px;
+    height: 2em;
+    color: green;
+    border: 3px solid #00f;
+    border-radius: 5px;
+    outline: none;
+}
+input:hover {
+    color: red;
+}
+
+input::placeholder {
+    color: #000;
+    opacity: 0.7;
+}
+
+button {
+    padding: 0px 10px;
+    height: 2em;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: green;
+    font-size: 16px;
+    width: auto;
+}
+
+button:hover {
+    color: red;
+}
+
+form > * {
+    display: inline-block;
+    vertical-align: middle;
+}

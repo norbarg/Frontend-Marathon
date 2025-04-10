@@ -1,0 +1,64 @@
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px solid rgb(191, 191, 191);
+    border-top: none;
+}
+
+th,
+td {
+    border: 2px solid rgb(191, 191, 191);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    border: none;
+    border-bottom: 2px solid rgb(191, 191, 191);
+    color: white;
+    font-weight: bold;
+    padding: 0px 20px;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+tfoot td {
+    background-color: white;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+tfoot a {
+    color: blue;
+    text-decoration: underline;
+}
+tr:nth-child(1) {
+    background-color: #d6923d;
+}
+tr:nth-child(2) {
+    background-color: #008001;
+}
+tr:nth-child(3) {
+    background-color: #005792;
+}
+tr:nth-child(4) {
+    background-color: #ffff05;
+}
+tr:nth-child(5) {
+    background-color: #c12a2e;
+}
+tr:nth-child(6) {
+    background-color: #8175b7;
+}
