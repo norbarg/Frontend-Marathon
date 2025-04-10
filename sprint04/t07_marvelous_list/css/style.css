@@ -1,0 +1,119 @@
+body {
+    font-family: Andale Mono, monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.seven-bg {
+    background: radial-gradient(ellipse at top, #000 20%, #e12607, #000 89%);
+}
+
+.prisoners-bg {
+    background: radial-gradient(
+        ellipse at top,
+        #fbe6c3 10%,
+        #13394c,
+        rgb(7, 7, 7) 74%
+    );
+}
+
+.cuckoo-bg {
+    background: linear-gradient(to bottom, #c0bfbf 30%, #3b3b3b);
+}
+
+.movie-header {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-list,
+.movie-info {
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.movie-list {
+    flex: 1;
+    text-align: center;
+}
+
+.movie-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.movie-list li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #444;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.movie-list li:hover,
+.movie-list li.active {
+    background-color: #666;
+}
+
+.movie-info {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.movie-text {
+    flex: 1;
+}
+
+.movie-info img {
+    width: 300px;
+    border-radius: 10px;
+}
+#movie-poster {
+    object-fit: cover;
+    object-position: center;
+    width: 280px;
+    height: 400px;
+}
+
+/* Обрезка только для seven.jpg */
+.seven-bg #movie-poster {
+    object-position: 50% 10%; /* Немного сдвигаем центр */
+    width: 270px; /* Делаем чуть уже */
+}
+.cuckoo-bg #header-image {
+    object-position: 50% 15%;
+}

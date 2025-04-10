@@ -1,0 +1,55 @@
+body {
+    background-color: #6d6565;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.stone {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: rotate(45deg);
+    cursor: move;
+}
+
+.yellow {
+    background-color: #d4b83c;
+    top: 50px;
+    left: 550px;
+}
+
+.green {
+    background-color: #2ecc71;
+    top: 150px;
+    left: 500px;
+}
+
+.purple {
+    background-color: #9b59b6;
+    top: 100px;
+    right: 550px;
+}
+
+.blue {
+    background-color: #3498db;
+    top: 200px;
+    left: 800px;
+}
+
+.red {
+    background-color: #e74c3c;
+    top: 250px;
+    right: 500px;
+}
+
+.pink {
+    background-color: #ff6b81;
+    top: 300px;
+    left: 650px;
+}
+
+.stone[draggable='false'] {
+    border: 2px dashed #fff;
+    cursor: default;
+}

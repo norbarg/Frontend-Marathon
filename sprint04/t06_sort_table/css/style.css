@@ -1,0 +1,49 @@
+h1 {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#notification {
+    display: inline-block;
+    position: fixed;
+    top: 2%;
+    background-color: gray;
+    padding: 8px 25px;
+    margin-top: 20px;
+    margin-left: 1200px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+table {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 0 5px black;
+    background-color: lightgray;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 2px solid white;
+    font-size: 18px;
+}
+
+th {
+    background-color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: darkred;
+}
+
+td {
+    width: 70px;
+    text-align: center;
+}

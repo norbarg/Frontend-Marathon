@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie List</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="seven-bg">
+        <header id="movie-header" class="movie-header">
+            <img
+                id="header-image"
+                src="assets/images/seven-header.jpg"
+                alt="Movie Banner"
+            />
+        </header>
+
+        <div class="container">
+            <div class="movie-list">
+                <h1>Select a Movie</h1>
+                <ul>
+                    <li data-movie="seven" class="active">Se7en</li>
+                    <li data-movie="prisoners">Prisoners</li>
+                    <li data-movie="cuckoo">
+                        One Flew Over <br />
+                        the Cuckoo's Nest
+                    </li>
+                </ul>
+            </div>
+
+            <div class="movie-info">
+                <div class="movie-details">
+                    <div class="movie-text">
+                        <h2 id="movie-title">Se7en</h2>
+                        <p>
+                            <strong>Year:</strong>
+                            <span id="movie-year">1995</span>
+                        </p>
+                        <p>
+                            <strong>Main Cast:</strong>
+                            <span id="movie-actors">
+                                Brad Pitt, Morgan Freeman, Kevin Spacey
+                            </span>
+                        </p>
+                        <p>
+                            <strong>Description:</strong>
+                            <span id="movie-description">
+                                Two detectives, a rookie and a veteran, hunt a
+                                serial killer who uses the seven deadly sins as
+                                his motives. The grim atmosphere, suspenseful
+                                storytelling, and shocking twists make this film
+                                an unforgettable crime thriller.
+                            </span>
+                        </p>
+                    </div>
+                    <img
+                        id="movie-poster"
+                        src="assets/images/seven.jpg"
+                        alt="Movie Poster"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
