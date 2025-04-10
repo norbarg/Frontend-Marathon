@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Human & Superhero</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Character Simulation</h1>
+
+            <div class="colum">
+                <img
+                    id="character-image"
+                    src="assets/images/human.jpg"
+                    alt="Character Image"
+                />
+                <div id="character-display"></div>
+            </div>
+
+            <button id="sleep-button" onclick="human.sleepFor()">Sleep</button>
+            <button id="feed-button" onclick="human.feed()">Feed</button>
+            <button id="turn-button" onclick="turnIntoSuperhero()">
+                Turn into Superhero
+            </button>
+
+            <button id="fly-button" onclick="human.fly()" style="display: none">
+                Fly
+            </button>
+            <button
+                id="fight-button"
+                onclick="human.fightWithEvil()"
+                style="display: none"
+            >
+                Fight with Evil
+            </button>
+
+            <div id="action-container">
+                <img id="action-image" src="" alt="Action Image" />
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
