@@ -1,0 +1,29 @@
+body {
+    display: flex;
+}
+
+.gauntlet {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 10px;
+}
+
+.person {
+    background: url('assets/images/man.png') no-repeat center;
+    background-size: contain;
+}
+
+.gauntlet:hover + .grid .person:nth-child(12n + 1),
+.gauntlet:hover + .grid .person:nth-child(12n + 3),
+.gauntlet:hover + .grid .person:nth-child(12n + 5),
+.gauntlet:hover + .grid .person:nth-child(12n + 8),
+.gauntlet:hover + .grid .person:nth-child(12n + 10),
+.gauntlet:hover + .grid .person:nth-child(12n) {
+    visibility: hidden;
+}

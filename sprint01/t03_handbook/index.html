@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Handbook</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1><a href="#handbook">Handbook</a></h1>
+
+        <section class="html-section">
+            <h2><a href="#html">HTML</a></h2>
+            <div class="grid">
+                <div class="card">
+                    <a href="#h1">h1</a>
+
+                    <p>The h1 to h6 tags are used to define HTML headings</p>
+                    <code>&lt;h1&gt;Title&lt;/h1&gt;</code>
+                    <p class="html_sect_title">Title</p>
+                </div>
+                <div class="card">
+                    <a href="#table">table</a>
+                    <p>Defines an HTML table</p>
+                    <code>&lt;table&gt;&lt;/table&gt;</code>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Country</th>
+                                <th>Country</th>
+                                <th>Country</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card">
+                    <a href="#hr">hr</a>
+                    <p>Draws a horizontal line</p>
+                    <code>&lt;hr&gt;</code>
+                    <hr />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diem nonummy nibh
+                    </p>
+                    <hr />
+                </div>
+                <div class="card">
+                    <a href="#input">input</a>
+                    <p>
+                        Designed to create text fields, various buttons, radio
+                        buttons and checkboxes
+                    </p>
+                    <code>&lt;input attributes&gt;</code>
+                    <p style="font-weight: bold">Your name</p>
+                    <input type="text" />
+                    <p style="font-weight: bold">Question</p>
+                    <input type="radio" /> answer <br />
+                    <input type="radio" /> answer <br />
+                    <input type="radio" /> answer
+                </div>
+                <div class="card">
+                    <a href="#button">button</a>
+                    <p>Clickable button.</p>
+                    <code>&lt;button&gt;Button&lt;/button&gt;</code><br /><br />
+                    <button>Button</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="css-section">
+            <h2><a href="#css">CSS</a></h2>
+            <div class="grid">
+                <div class="card">
+                    <a href="#backgrond">backgrond</a>
+                    <p>Specifies the background of an element</p>
+                    <code>background: [];</code>
+                    <br />
+
+                    <div style="background-color: red">
+                        <p><br />Text <br /><br /><br /></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#opacity">opacity</a>
+                    <p>Specifies the opacity/transparency of an element</p>
+                    <code>opacity: 0.8;</code><br /><br />
+                    <div
+                        style="
+                            padding: 0;
+                            background-color: green;
+                            width: 25px;
+                            height: 15px;
+                            opacity: 1;
+                        "
+                    ></div>
+                    <div
+                        style="
+                            padding: 0;
+                            background-color: green;
+                            width: 25px;
+                            height: 15px;
+                            opacity: 0.8;
+                        "
+                    ></div>
+                    <div
+                        style="
+                            padding: 0;
+                            background-color: green;
+                            width: 25px;
+                            height: 15px;
+                            opacity: 0.5;
+                        "
+                    ></div>
+                    <div
+                        style="
+                            padding: 0;
+                            background-color: green;
+                            width: 25px;
+                            height: 15px;
+                            opacity: 0.1;
+                        "
+                    ></div>
+                </div>
+                <div class="card">
+                    <a href="#line-height">line-height</a>
+                    <p>Specifies the height of a line</p>
+                    <code>line-height: 1.5;</code>
+                    <p style="line-height: 1.5">Lorem ipsum dolor.</p>
+                    <p style="line-height: 1.5">Lorem ipsum dolor.</p>
+                </div>
+                <div class="card">
+                    <a href="#text-transform">text-transform</a>
+                    <p>Controls the capitalization of text</p>
+                    <br />
+                    <code>text-transform: uppercase;</code>
+                    <br /><br />
+                    <p>
+                        LOREM Ipsum Dolor Sit AMET, CONSECTETUR adipisicing
+                        elit. VITAE, DOI-ORE.
+                    </p>
+                </div>
+                <div class="card">
+                    <a href="#border">border</a>
+                    <p>Specifies the style of the outline</p>
+                    <br />
+                    <code>border-bottom: 2px solid #666;</code><br /><br />
+                    <div
+                        style="
+                            padding: 5px;
+                            width: 30px;
+                            height: 30px;
+                            border-bottom: 2px solid red;
+                            background-color: lightgray;
+                        "
+                    ></div>
+                </div>
+                <div class="card">
+                    <a href="#font-size">font-size</a>
+                    <p>Specifies the font size of the item. %,px,rem,inherit</p>
+                    <code>font-size: 24px;</code>
+                    <p style="font-size: 24px">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ratione, esse.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="protocols-section">
+            <h2>Protocols</h2>
+            <div class="grid">
+                <div class="card">
+                    <a href="#HTTPmethods">HTTP methods</a>
+                    <p>
+                        GET - use this type of requests to retrieve resource
+                        representation/information only — and not to modify it
+                        in any way
+                        <br />
+                        <br />
+                        POST - used to create a new resource into the collection
+                        of resources
+                        <br />
+                        <br />
+                        PUT - use it primarily to update existing resource (if
+                        the resource does not exist then API may decide to
+                        create a new resource or not)
+                        <br />
+                        <br />
+                        DELETE - used to delete resources (identified by the
+                        Request-URI)
+                        <br />
+                        <br />
+                        PATCH - HTTP PATCH requests are to make partial update
+                        on a resource
+                    </p>
+                </div>
+                <div class="card">
+                    <a href="#HTTPstatuscode">HTTP status code</a>
+                    <p>
+                        lxx: Informational example: 100 Continue
+                        <br />
+                        <br />
+                        2xx: Success example: 201 Created
+                        <br />
+                        <br />
+                        3xx: Redirection example: 301 Moved Permanently
+                        <br />
+                        <br />
+                        4xx: Client Error example: 404 Not Found
+                        <br />
+                        <br />
+                        5xx: Server Error example: 500 Internal Server Error
+                    </p>
+                </div>
+                <div class="card">
+                    <a href="#DNSlistbytypes">DNS list by types</a>
+
+                    <p>
+                        A - (address record) - specifies IP address (IPv4) for
+                        given host. A records are used for conversion of domain
+                        names to corresponding IP addresses
+                        <br />
+                        <br />
+                        AAAA (IPv6 address record) - specifies IPv6 address for
+                        given host. So it works the same way as the A record and
+                        the difference is the type of IP address
+                        <br />
+                        <br />
+                        CNAME (canonical name record) - specifies a domain name
+                        that has to be queried in order to resolve the original
+                        DNS query. Therefore CNAME records are used for creating
+                        aliases of domain names. CNAME records are truly useful
+                        when we want to alias our domain to an external domain.
+                        In other cases we can remove CNAME records and replace
+                        them with A records and even decrease performance
+                        overhead
+                        <br />
+                        <br />
+                        HINFO (Host Information records) - used to acquire
+                        general information about a host. The record specifies
+                        type of CPU and OS. The HINFO record data provides the
+                        possibility to use operating system specific protocols
+                        when two hosts want to communicate. For security reasons
+                        the HINFO records are not typically used on public
+                        servers
+                        <br />
+                        <br />
+                        ISDN (Integrated Services Digital Network records) •
+                        specifies ISDN address for a host. An ISDN address is a
+                        telephone number that consists of a country code, a
+                        national destination code, a ISDN Subscriber number and,
+                        optionally, a ISDN subaddress. The function of the
+                        record is only variation of the A resource record
+                        function
+                        <br />
+                        <br />
+                        MX (Mail exchanger record) - specifies a mail exchange
+                        server for a DNS domain name. The information is used by
+                        Simple Mail Transfer Protocol (SMTP) to route emails to
+                        proper hosts. Tnically, there are more than one mail
+                        exchange server for a DNS domain and each of them have
+                        set priority
+                        <br />
+                        <br />
+                        NS (name server) - specifies an authoritative name
+                        server for given host
+                        <br />
+                        <br />
+                        PTR (Reverse-lookup Pointer records) - AS opposed to
+                        forward DNS resolution (A and AAAA DNS records), the PTR
+                        record is used to 100k up domain names based on an IP
+                        address
+                        <br />
+                        <br />
+                        SOA (Start of Authority records) - The record specifies
+                        core information about a DNS zone. including the primary
+                        name server, the email of the domain administrator, the
+                        domain serial number, and several timers relating to
+                        refreshing the zone
+                        <br />
+                        <br />
+                        TXT (Text records) - The text record can hold arbitrary
+                        non- formatted text string. Typically the record is used
+                        by Sender Policy Framework (SPF) to prevent fake emails
+                        to appear to be sent by you
+                    </p>
+                </div>
+                <div class="card">
+                    <a href="#IdentifyinggooglesIP">Identifying google's IP</a>
+                    <p>
+                        To identify google.com IP, follow the next steps:
+                        <br />
+                        <br />
+                        l. open Terminal
+                        <br />
+                        <br />
+                        2. paste and run the command nslookup google.com
+                        <br />
+                        <br />
+                        As result, you will receive "name" and "address":
+                        <br />
+                        Name: google.com.ua
+                        <br />
+                        Address: 216.58.215.99
+                        <br />
+                        Repeat steps 1 and 2 to identify google.com.ua IP
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    background-color: #f4d03f;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+    padding: 0.5em;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.html_sect_title {
+    font-weight: bold;
+    font-size: 25px;
+}
+.grid {
+    display: grid;
+    gap: 30px;
+    padding: 0 60px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+}
+
+.example {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.background {
+    background: linear-gradient(45deg, red, yellow);
+}
+
+.opacity {
+    background: black;
+    opacity: 0.8;
+}
+
+.border {
+    border-bottom: 2px solid #666;
+}
+
+/* Адаптивная сетка */
+@media (min-width: 320px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .protocols-section .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Последняя секция - только 2 столбца в самом большом разрешении */
+@media (min-width: 1024px) {
+    .html-section .grid,
+    .css-section .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .protocols-section .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
