@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cal</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <h1>BMOcalculator</h1>
+        <div class="calculator">
+            <!-- Дисплей -->
+            <div class="display">
+                <div class="top-display">
+                    <div class="history"></div>
+                    <div class="face">
+                        <img src="https://kappa.lol/svYA_n" alt="face" />
+                    </div>
+                </div>
+                <div class="current-input">0</div>
+            </div>
+
+            <!-- Блок кнопок -->
+            <div class="buttons-grid">
+                <div class="grid modes">
+                    <button class="mode color-green">area</button>
+                    <button class="mode color-green">weights</button>
+                    <button class="mode color-green">length</button>
+                </div>
+                <div class="grid numbers">
+                    <button class="color-red memory" data-action="MC">
+                        MC
+                    </button>
+                    <button class="color-green memory" data-action="M+">
+                        M+
+                    </button>
+                    <button class="color-green memory" data-action="M-">
+                        M-
+                    </button>
+                    <button class="color-red">C</button>
+                    <button class="color-green">+/-</button>
+                    <button class="color-green">%</button>
+                    <button class="color-white">7</button>
+                    <button class="color-white">8</button>
+                    <button class="color-white">9</button>
+                    <button class="color-white">4</button>
+                    <button class="color-white">5</button>
+                    <button class="color-white">6</button>
+                    <button class="color-white">1</button>
+                    <button class="color-white">2</button>
+                    <button class="color-white">3</button>
+                    <button class="color-white">0</button>
+                    <button class="color-white">00</button>
+                    <button class="color-green">.</button>
+                </div>
+                <div class="grid operations">
+                    <button class="color-green memory" data-action="MR">
+                        MR
+                    </button>
+                    <button class="color-green sistem">binary</button>
+                    <button class="color-green">+</button>
+                    <button class="color-green sistem">hexad</button>
+                    <button class="color-green">-</button>
+                    <button class="color-green" id="factorial">x!</button>
+                    <button class="color-green">&times;</button>
+                    <button class="color-green" id="power" data-value="^">
+                        xⁿ
+                    </button>
+                    <button class="color-green">&divide;</button>
+                    <button class="color-green" id="sqrt">&radic;</button>
+                    <button class="equal">=</button>
+                </div>
+                <div class="grid advanced-modes">
+                    <button class="mode color-green" id="change-theme-btn">
+                        change theme
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img
+                    class="blueEll"
+                    src="https://kappa.lol/C3h46c"
+                    alt="blueEll"
+                />
+                <img
+                    class="greeenEll"
+                    src="https://kappa.lol/Z4SsBb"
+                    alt="greeenEll"
+                />
+                <img
+                    class="pinkEll"
+                    src="https://kappa.lol/Ebx0Wg"
+                    alt="pinkEll"
+                />
+                <img
+                    class="bluePolyg"
+                    src="https://kappa.lol/3rtzTu"
+                    alt="bluePolyg"
+                />
+                <img
+                    class="blueRect1"
+                    src="https://kappa.lol/CK972m"
+                    alt="blueRect1"
+                />
+                <img
+                    class="blueRect2"
+                    src="https://kappa.lol/CK972m"
+                    alt="blueRect2"
+                />
+                <img
+                    class="greenRect"
+                    src="https://kappa.lol/IaM7Vn"
+                    alt="greenRect"
+                />
+                <img
+                    class="yellowPlus"
+                    src="https://kappa.lol/vgcJfe"
+                    alt="yellowPlus"
+                />
+                <img class="arm1" src="https://kappa.lol/_ekPOx" alt="arm1" />
+                <img class="arm2" src="https://kappa.lol/_ekPOx" alt="arm2" />
+                <img class="leg1" src="https://kappa.lol/-lVqH1" alt="leg1" />
+                <img class="leg2" src="https://kappa.lol/-lVqH1" alt="leg2" />
+            </div>
+        </div>
+        <script type="module" src="js/main.js"></script>
+        <script src="js/change_theme.js"></script>
+        <script src="js/conversion_modes.js"></script>
+        <script src="js/systems.js"></script>
+    </body>
+</html>
