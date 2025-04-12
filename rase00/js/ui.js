@@ -31,6 +31,19 @@ export function appendDigit(digit) {
         isResultDisplayed = false;
         setClearButtonTo('C');
     }
+
+    if (digit === '.') {
+        const lastNumber = expression.split(/[\+\-\×\÷\^]/).pop();
+        if (lastNumber.includes('.')) {
+            return;
+        }
+        if (lastNumber === '') {
+            expression += '0.';
+            updateDisplay();
+            return;
+        }
+    }
+
     expression += digit;
     updateDisplay();
 }
@@ -40,7 +53,20 @@ export function appendOperator(operator) {
         isResultDisplayed = false;
         setClearButtonTo('C');
     }
-    expression += operator;
+
+    const lastChar = expression.slice(-1);
+    const isLastOperator = ['+', '-', '×', '÷', '^'].includes(lastChar);
+
+    if (isLastOperator) {
+        // замінюємо останній оператор
+        expression = expression.slice(0, -1) + operator;
+    } else if (expression === '' && operator === '-') {
+        // дозволити мінус на початку
+        expression += operator;
+    } else if (expression !== '') {
+        expression += operator;
+    }
+
     updateDisplay();
 }
 
