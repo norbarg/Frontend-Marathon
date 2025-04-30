@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>New Avenger application</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>New Avenger application</h1>
+
+        <div id="result-block">Form is empty</div>
+
+        <!-- Блок результата -->
+
+        <!-- Форма -->
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>About candidate</legend>
+                <label>
+                    Name
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Tell your name"
+                        required
+                    />
+                </label>
+                <label>
+                    E-mail
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Tell your e-mail"
+                        required
+                    />
+                </label>
+                <label>
+                    Age
+                    <input type="number" name="age" required /> </label
+                ><br /><br />
+
+                <label>
+                    About
+                    <textarea
+                        name="description"
+                        maxlength="500"
+                        placeholder="Tell about yourself, max 500 symbols"
+                        required
+                    ></textarea></label
+                ><br /><br />
+                <label>
+                    Photo
+                    <input type="file" name="photo" />
+                </label>
+            </fieldset>
+            <div class="buttons">
+                <button type="reset">CLEAR</button>
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+    </body>
+</html>

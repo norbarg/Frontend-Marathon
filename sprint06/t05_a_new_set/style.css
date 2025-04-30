@@ -1,0 +1,39 @@
+body {
+    margin: 30px;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+form {
+    border: 2px solid #999;
+    padding: 1em;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 15px;
+    margin-right: 10px;
+}
+
+#result-block {
+    border: 1px solid #888;
+    background-color: #bfbdbd;
+    padding: 1em;
+    margin-bottom: 1em;
+    font-family: monospace;
+}
