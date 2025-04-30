@@ -9,3 +9,4 @@
 -   [sprint03](./sprint03) - 100/100
 -   [sprint04](./sprint04) - 100/100
 -   [sprint05](./sprint05) - 100/100
+-   [sprint06](./sprint06) - 100/100
