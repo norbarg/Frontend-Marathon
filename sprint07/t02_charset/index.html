@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Charset</title>
+    </head>
+    <body>
+        <h1>Charset</h1>
+
+        <label
+            >Change charset:
+            <input type="text" id="input-change" />
+        </label>
+        <br /><br />
+
+        <label>Select charset or several charsets:</label>
+        <select id="charset-select" multiple size="3">
+            <option value="utf-8">UTF-8</option>
+            <option value="iso-8859-1">ISO-8859-1</option>
+            <option value="windows-1252">Windows-1252</option>
+        </select>
+        <button id="change-btn">Change charset</button>
+        <button id="clear-btn">Clear</button>
+
+        <br /><br />
+
+        <div id="output-section" style="display: none"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

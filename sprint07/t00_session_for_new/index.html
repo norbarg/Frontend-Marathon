@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Session for new</title>
+    </head>
+    <body>
+        <h1>Session for new</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>About HERO</legend>
+                Real Name: <input type="text" name="name" /> Current
+                Alias:<input type="text" name="alias" /> Age:<input
+                    type="number"
+                    name="age"
+                /><br /><br />
+                About:
+                <textarea name="description"></textarea><br /><br />
+                Photo: <input type="file" name="photo" /><br />
+                <br />
+            </fieldset>
+
+            <fieldset>
+                <br />
+                <legend>Powers</legend>
+                <label
+                    ><input type="checkbox" name="powers" value="Strength" />
+                    Strength</label
+                >
+                <label
+                    ><input type="checkbox" name="powers" value="Speed" />
+                    Speed</label
+                >
+                <label
+                    ><input
+                        type="checkbox"
+                        name="powers"
+                        value="Intelligence"
+                    />
+                    Intelligence</label
+                >
+                <label
+                    ><input
+                        type="checkbox"
+                        name="powers"
+                        value="Teleportation"
+                    />
+                    Teleportation</label
+                >
+                <label
+                    ><input type="checkbox" name="powers" value="Immortal" />
+                    Immortal</label
+                >
+                <label
+                    ><input type="checkbox" name="powers" value="Another" />
+                    Another</label
+                ><br />
+                <br />
+
+                Level of control:
+                <input type="range" name="level" min="0" max="10" /><br />
+                <br />
+            </fieldset>
+
+            <fieldset>
+                <br />
+                <legend>Publicity</legend>
+                <label
+                    ><input type="radio" name="publicity" value="1" />
+                    UNKNOWN</label
+                >
+                <label
+                    ><input type="radio" name="publicity" value="2" /> LIKE A
+                    GHOST</label
+                >
+                <label
+                    ><input type="radio" name="publicity" value="3" /> I AM IN
+                    COMICS</label
+                >
+                <label
+                    ><input type="radio" name="publicity" value="4" /> I HAVE
+                    FUN CLUB</label
+                >
+                <label
+                    ><input type="radio" name="publicity" value="5" />
+                    SUPERSTAR</label
+                >
+                <br /><br />
+            </fieldset>
+            <br />
+            <button type="submit">SEND</button>
+            <button type="reset">CLEAR</button>
+        </form>
+    </body>
+</html>

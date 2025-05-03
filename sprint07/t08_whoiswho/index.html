@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Parsing CSV data</title>
+        <script src="script.js" defer></script>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            select {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Parsing CSV data</h1>
+
+        <div>
+            <label for="fileInput">Upload:</label>
+            <input type="file" id="fileInput" />
+            <button id="uploadBtn">Upload</button>
+        </div>
+
+        <div id="filters"></div>
+
+        <table id="dataTable">
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </body>
+</html>

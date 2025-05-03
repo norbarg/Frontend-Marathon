@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>File manager</title>
+    </head>
+    <body>
+        <h1>File manager</h1>
+
+        <div class="section">
+            <h2>Create a file</h2>
+            <form id="create-form">
+                <label
+                    >Filename
+                    <input type="text" id="filename" required /></label
+                ><br /><br />
+                <label
+                    >Content <textarea id="content" required></textarea></label
+                ><br /><br />
+                <button type="submit">Create file</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Files:</h2>
+            <ul id="file-list"></ul>
+        </div>
+
+        <div class="section" id="current-file" style="display: none">
+            <h2><strong>Selected file</strong></h2>
+            <p><span id="current-name"></span></p>
+            <p>Content:</p>
+            <pre id="current-content"></pre>
+            <button id="delete-btn">Delete file</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
