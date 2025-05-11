@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "msvishchev",
+    "password": "securepass",
+    "database": "ucode_web",
+    "connectionLimit": 10
+}
