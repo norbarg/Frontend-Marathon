@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&family=Ruslan+Display&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../public/style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/register">Register</a>
+            <a href="/reminder">Forgot password?</a>
+        </nav>
+
+        <form id="loginForm">
+            <h1>Agent Login</h1>
+            <label for="login">login</label>
+            <input name="login" placeholder="login" required />
+            <label for="password">password</label>
+            <input
+                name="password"
+                type="password"
+                placeholder="password"
+                required
+            />
+            <button type="submit" class="kay-pho-du-regular">Login</button>
+        </form>
+
+        <div id="statusBox" class="hidden">
+            <h1>
+                Logged in as <span id="userLogin"></span> (<span
+                    id="userStatus"
+                ></span
+                >)
+            </h1>
+            <button id="logoutBtn" class="kay-pho-du-regular">Logout</button>
+        </div>
+
+        <div id="message" class="hidden"></div>
+
+        <script>
+            async function getUser() {
+                const res = await fetch('/me');
+                return await res.json();
+            }
+
+            document.addEventListener('DOMContentLoaded', async () => {
+                const form = document.getElementById('loginForm');
+                const statusBox = document.getElementById('statusBox');
+                const messageBox = document.getElementById('message');
+                const logoutBtn = document.getElementById('logoutBtn');
+                const userLogin = document.getElementById('userLogin');
+                const userStatus = document.getElementById('userStatus');
+
+                const user = await getUser();
+                if (user.login) {
+                    form.classList.add('hidden');
+                    statusBox.classList.remove('hidden');
+                    userLogin.textContent = user.login;
+                    userStatus.textContent = user.status;
+                }
+
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const formData = new URLSearchParams(
+                        new FormData(form)
+                    ).toString();
+                    const res = await fetch('/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: formData,
+                    });
+
+                    if (res.redirected) {
+                        window.location.href = res.url;
+                        return;
+                    }
+
+                    const text = await res.text();
+                    showMessage(text, false);
+                });
+
+                logoutBtn.addEventListener('click', async () => {
+                    await fetch('/logout', { method: 'POST' });
+                    location.href = '/login';
+                });
+
+                function showMessage(msg, success) {
+                    messageBox.textContent = msg;
+                    messageBox.style.color = 'crimson';
+
+                    messageBox.classList.remove('hidden', 'error', 'show');
+                    if (!success) messageBox.classList.add('error');
+                    setTimeout(() => messageBox.classList.add('show'), 10);
+                    setTimeout(() => messageBox.classList.remove('show'), 3010);
+                }
+            });
+        </script>
+    </body>
+</html>

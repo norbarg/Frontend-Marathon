@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Password Reminder</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&family=Ruslan+Display&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../public/style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/login">Login</a>
+        </nav>
+
+        <form id="reminderForm">
+            <h1>Forgot Password?</h1>
+            <label for="email">enter your email</label>
+            <input type="email" name="email" required placeholder="email" />
+            <button type="submit" class="kay-pho-du-regular">
+                remind password
+            </button>
+        </form>
+        <div id="message"></div>
+
+        <script>
+            const showMessage = (text, success) => {
+                const msg = document.getElementById('message');
+                msg.textContent = text;
+                msg.style.color = success ? 'darkgreen' : 'crimson';
+                msg.classList.add('show');
+                setTimeout(() => msg.classList.remove('show'), 3000);
+            };
+
+            document
+                .getElementById('reminderForm')
+                .addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const formData = new URLSearchParams(
+                        new FormData(e.target)
+                    ).toString();
+                    const res = await fetch('/remind', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: formData,
+                    });
+                    const text = await res.text();
+                    showMessage(text, res.ok);
+                });
+        </script>
+    </body>
+</html>

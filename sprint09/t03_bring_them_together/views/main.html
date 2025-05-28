@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Welcome Agent</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&family=Ruslan+Display&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../public/style.css" />
+    </head>
+    <body>
+        <div id="message" class="hidden"></div>
+        <h1>
+            Logged in as <span id="userLogin"></span> (<span
+                id="userStatus"
+            ></span
+            >)
+        </h1>
+        <button id="logoutBtn" class="kay-pho-du-regular">Logout</button>
+
+        <script>
+            async function getUser() {
+                const res = await fetch('/me');
+                return await res.json();
+            }
+
+            document.addEventListener('DOMContentLoaded', async () => {
+                const user = await getUser();
+                if (!user.login) {
+                    location.href = '/login';
+                    return;
+                }
+
+                document.getElementById('userLogin').textContent = user.login;
+                document.getElementById('userStatus').textContent = user.status;
+                showMessage(`Welcome, ${user.login}!`, true);
+                document
+                    .getElementById('logoutBtn')
+                    .addEventListener('click', async () => {
+                        await fetch('/logout', { method: 'POST' });
+                        location.href = '/login';
+                    });
+            });
+            function showMessage(msg, success) {
+                const messageBox = document.getElementById('message');
+                messageBox.textContent = msg;
+                messageBox.style.color = 'lightgreen';
+                messageBox.classList.remove('hidden', 'error', 'show');
+                if (!success) messageBox.classList.add('error');
+                setTimeout(() => messageBox.classList.add('show'), 10);
+                setTimeout(() => messageBox.classList.remove('show'), 3010);
+            }
+        </script>
+    </body>
+</html>

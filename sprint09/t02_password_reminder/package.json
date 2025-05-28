@@ -1,0 +1,16 @@
+{
+    "name": "t02_password_reminder",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "nodemailer": "^7.0.3",
+        "mysql2": "^3.5.2"
+    }
+}

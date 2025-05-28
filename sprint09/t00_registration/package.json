@@ -1,0 +1,11 @@
+{
+    "name": "t00_registration",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "mysql2": "^3.5.2"
+    }
+}

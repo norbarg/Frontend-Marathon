@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Registration</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&family=Ruslan+Display&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../public/style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="/login">Login</a>
+        </nav>
+
+        <form id="regForm" action="/register" method="POST">
+            <h1 class="kay-pho-du-regular">New Agent</h1>
+            <label for="login">login</label>
+            <input name="login" placeholder="login" required />
+            <label for="password">password</label>
+            <input
+                type="password"
+                name="password"
+                placeholder="password"
+                required
+            />
+            <label for="password">confirm password</label>
+            <input
+                type="password"
+                name="confirm"
+                placeholder="confirm password"
+                required
+            />
+            <label for="fullname">fullname</label>
+            <input name="fullname" placeholder="full name" required />
+            <label for="email">email</label>
+            <input name="email" type="email" placeholder="email" required />
+            <button type="submit" class="kay-pho-du-regular">Register</button>
+        </form>
+
+        <div id="message"></div>
+
+        <script>
+            document
+                .getElementById('regForm')
+                .addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    const form = e.target;
+                    const formData = new URLSearchParams(
+                        new FormData(form)
+                    ).toString();
+
+                    const res = await fetch('/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: formData,
+                    });
+
+                    const message = await res.text();
+                    const msgDiv = document.getElementById('message');
+                    msgDiv.textContent = message;
+                    msgDiv.style.color = res.ok ? 'lightgreen' : 'crimson';
+
+                    msgDiv.classList.add('show');
+                    if (res.ok) form.reset();
+
+                    setTimeout(() => {
+                        msgDiv.classList.remove('show');
+                    }, 3000);
+                });
+        </script>
+    </body>
+</html>

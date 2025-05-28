@@ -1,0 +1,13 @@
+{
+    "host": "localhost",
+    "user": "msvishchev",
+    "password": "securepass",
+    "database": "sword",
+    "email": {
+        "service": "gmail",
+        "auth": {
+            "user": "добавь сюда почту",
+            "pass": "добавь сюда пароль приложений"
+        }
+    }
+}

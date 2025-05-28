@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "user": "msvishchev",
+    "password": "securepass",
+    "database": "sword",
+    "waitForConnections": true,
+    "connectionLimit": 10,
+    "queueLimit": 0
+}
